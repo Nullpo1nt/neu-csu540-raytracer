@@ -1,0 +1,74 @@
+// Test Scene 4 - 2nd light position
+// Diffuse shading, surface and z-plane (z=0) shadows
+Scene {
+	background=(0.5,0.5,0.5);
+	camera=(240, 248, 5000);
+	shadow=(0.25,0.25,0.25);
+	zplaneshadow=true;
+	surfaceshadow=true;	
+
+	Light {
+		position=(240,600,2000);
+		color=(1,1,1);
+	}
+	
+	Sphere {
+		position= (100, 100, 50);
+		radius=   50;
+		color=    (0.5,0,0.5);
+		
+		Material {
+			diffuse=   1.0;
+			emission=  0.0;
+			specular=  0.0;
+			shininess= 1.0;
+			reflect=   0.0;
+			alpha=     1.0;
+		}
+	}
+	
+	Sphere {
+		position=(150,200,250);
+		radius=50;
+		color=(0.5,0.5,0.0);
+		
+		Material {
+			diffuse=1.0;
+			emission=0.0;
+			specular=0.0;
+			shininess=1.0;
+			reflect=0.0;
+			alpha=1.0;
+		}
+	}
+	
+	Sphere {
+		position=(350,220,500);
+		radius=50;
+		color=(0,0.5,0.5);
+		
+		Material {
+			diffuse=1.0;
+			emission=0.0;
+			specular=0.0;
+			shininess=1.0;
+			reflect=0.0;
+			alpha=1.0;
+		}
+	}
+	
+	Sphere {
+		position=(250,300,750);
+		radius=50;
+		color=(0.25,0.25,0.5);
+		
+		Material {
+			diffuse=1.0;
+			emission=0.0;
+			specular=0.0;
+			shininess=1.0;
+			reflect=0.0;
+			alpha=1.0;
+		}
+	}
+}

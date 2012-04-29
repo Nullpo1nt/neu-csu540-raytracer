@@ -1,0 +1,111 @@
+// Multiple Light Test Scene
+// 3 diffuse balls of various reflectivity
+// 1 sphere with no diffuse color and 1.0 reflectivity
+// 1 white sphere behind the back pane
+// 4 lights (in corners at z=500)
+Scene {
+	background=(0.5, 0.5, 1.0);
+	shadow=(0.25,0.25,0.5);
+	camera=(300, 300, 2000);
+	focus=(300,300, 500);
+	zplaneshadow=true;
+	surfaceshadow=true;
+	
+	
+	Light {
+		position=(0,0,500);
+		color=(0.5,0.5,0.5);
+	}
+	
+	Light {
+		position=(600,600,500);
+		color=(0.5,0.5,0.5);
+	}
+
+	Light {
+		position=(0,600,500);
+		color=(0.5,0.5,0.5);
+	}
+	
+	Light {
+		position=(600,0,500);
+		color=(0.5,0.5,0.5);
+	}
+
+	// Mirror
+	Sphere {
+		position=(300,450,100);
+		radius=100;
+		color=(0.8,0.8,1);
+
+		Material {
+			diffuse=0.0;
+			emission=0.0;
+			specular=0.4;
+			shininess=4;
+			reflect=1.0;
+			alpha=1.0;
+		}
+	}
+		
+	Sphere {
+		position= (150, 300, 100);
+		radius=   100;
+		color=    (0.5,0,0.5);
+		
+		Material {
+			diffuse=   0.8;
+			emission=  0.2;
+			specular=  0.8;
+			shininess= 8;
+			reflect=   0.33;
+			alpha=     1.0;
+		}
+	}
+	
+	Sphere {
+		position=(450,300,100);
+		radius=100;
+		color=(0,0.5,0.5);
+		
+		Material {
+			diffuse=0.8;
+			emission=0.2;
+			specular=0.8;
+			shininess=8;
+			reflect=0.66;
+			alpha=1.0;
+		}
+	}
+	
+	Sphere {
+		Position=(300,150,100);
+		radius=100;
+		color=(0.5,0.5,0);
+
+		Material {
+			diffuse=0.8;
+			emission=0.2;
+			specular=0.8;
+			shininess=8;
+			reflect=1.0;
+			alpha=1;
+		}
+	}
+
+// "Floor" Sphere
+	Sphere {
+		position=(300,300,-300);
+		radius=300;
+		color=(1.0,1.0,1.0);
+		
+		Material {
+			diffuse=1.0;
+			emission=0;
+			specular=0;
+			shininess=0;
+			reflect=0;
+			alpha=1.0;
+		}
+	}
+}

@@ -1,0 +1,72 @@
+// Test Scene 1
+Scene {
+	background=(0,0,0);
+	camera=(200, 200, 1000);
+	surfaceshadow=false;
+	zplaneshadow = false;
+
+	Light {
+		position=(750,0,2000); // Test
+		color=(1,1,1);
+	}
+	
+	Sphere {
+		position= (100, 100, 100);
+		radius=   50;
+		color=    (0.5,0,0.5);
+		
+		Material {
+			diffuse=   0.8;
+			emission=  0.2;
+			specular=  0.8;
+			shininess= 8.0;
+			reflect=   0.7;
+			alpha=     1.0;
+		}
+	}
+	
+	Sphere {
+		position=(150,200,300);
+		radius=50;
+		color=(0.5,0.5,0.0);
+		
+		Material {
+			diffuse=0.8;
+			emission=0.2;
+			specular=0.8;
+			shininess=8.0;
+			reflect=0.7;
+			alpha=1.0;
+		}
+	}
+	
+	Sphere {
+		position=(350,220,150);
+		radius=50;
+		color=(0,0.5,0.5);
+		
+		Material {
+			diffuse=0.8;
+			emission=0.2;
+			specular=0.8;
+			shininess=8.0;
+			reflect=0.7;
+			alpha=1.0;
+		}
+	}
+	
+	Sphere {
+		position=(250,300,400);
+		radius=50;
+		color=(0.25,0.25,0.5);
+		
+		Material {
+			diffuse=0.8;
+			emission=0.2;
+			specular=0.8;
+			shininess=8.0;
+			reflect=0.7;
+			alpha=1.0;
+		}
+	}
+}

@@ -1,0 +1,74 @@
+// Test Scene 3 - Closeup of the four spheres
+// Diffuse shading, z-plane (z=0) shadows
+Scene {
+	camera=(200,200,500);
+	background=(0.5,0.5,0.5);
+	shadow=(0.25,0.25,0.25);
+	zplaneshadow=true;
+	surfaceshadow=false;	
+
+	Light {
+		position=(500,250,1000);
+		color=(1,1,1);
+	}
+	
+	Sphere {
+		position= (100, 100, 100);
+		radius=   50;
+		color=    (0.5,0,0.5);
+		
+		Material {
+			diffuse=   1.0;
+			emission=  0.0;
+			specular=  0.0;
+			shininess= 1.0;
+			reflect=   0.0;
+			alpha=     1.0;
+		}
+	}
+	
+	Sphere {
+		position=(150,200,300);
+		radius=50;
+		color=(0.5,0.5,0.0);
+		
+		Material {
+			diffuse=1.0;
+			emission=0.0;
+			specular=0.0;
+			shininess=1.0;
+			reflect=0.0;
+			alpha=1.0;
+		}
+	}
+	
+	Sphere {
+		position=(350,220,150);
+		radius=50;
+		color=(0,0.5,0.5);
+		
+		Material {
+			diffuse=1.0;
+			emission=0.0;
+			specular=0.0;
+			shininess=1.0;
+			reflect=0.0;
+			alpha=1.0;
+		}
+	}
+	
+	Sphere {
+		position=(250,300,400);
+		radius=50;
+		color=(0.25,0.25,0.5);
+		
+		Material {
+			diffuse=1.0;
+			emission=0.0;
+			specular=0.0;
+			shininess=1.0;
+			reflect=0.0;
+			alpha=1.0;
+		}
+	}
+}
